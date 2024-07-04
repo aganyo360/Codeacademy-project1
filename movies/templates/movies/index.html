@@ -1,1 +1,44 @@
-<h1>Hellow world</h1>
+<style>
+    table {
+        width: 50%;
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 18px;
+        text-align: left;
+    }
+    th, td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+    }
+    tr:hover {background-color: #f5f5f5;}
+</style>
+<table class="table">
+    <thead>
+        
+        <tr>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Stock</th>
+            <th>Rating</th>
+            <th>Date Created</th>
+        </tr>
+        
+    </thead>
+    <tbody>
+    
+    {% for movie in movies  %}
+        
+        {% comment %} {% if movie.daily_rate > 5 %} {% endcomment %}
+        
+        
+        <tr>
+            <td>{{movie.title}}</td>
+            <td>{{movie.genre}}</td>
+            <td>{{movie.number_in_stock}}</td>
+            <td>{{movie.daily_rate}}</td>
+            <td>{{movie.date_created}}</td>
+        </tr>
+        {% comment %} {% endif %} {% endcomment %}
+        {% endfor %}
+    </tbody>
+</table>
