@@ -21,6 +21,7 @@ Vidly is a Django application that displays movies along with their genres, rati
 - Bootstrap
 - HTML
 - SQLite (default database)
+- Javascript
 
 ## Installation
 
